@@ -1,0 +1,9 @@
+.form{
+    padding: 0 6rem;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
