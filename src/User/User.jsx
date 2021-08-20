@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 // import Loader from "react-loader-spinner";
 import "./User.css";
 import {
-  Button,
-  Input,
+    Input,
   makeStyles,
   Paper,
   Table,
@@ -40,7 +39,7 @@ const User = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     fetchUser();
-    setInputData("");
+    setInputData('')
   };
 
   const useStyles = makeStyles({
@@ -51,19 +50,11 @@ const User = () => {
   const classes = useStyles();
   return (
     <div className="form">
-      <h1 style={{ marginBottom: "2rem" }}>Enter Search Text</h1>
+      <h1 style={{marginBottom:"2rem"}}>Enter Search Text</h1>
       <form onClick={submitHandler}>
-        <div className="header">
-          <Input
-            style={{ marginRight:"2rem" }}
-            type="text"
-            onChange={onchangeHandler}
-            value={inputData}
-          />
-          <Button variant="contained" color="primary">
-            Search
-          </Button>
-        </div>
+        <Input style={{marginBottom:"2rem"}} type="text" onChange={onchangeHandler} value={inputData} />
+        <button className="btn">Search</button>
+
         <TableContainer component={Paper}>
           <Table className={classes.table} aria-label="simple table">
             <TableHead style={{ color: "white" }}>
@@ -79,7 +70,7 @@ const User = () => {
                 {userData.map((row, id) => (
                   <TableRow key={row.id}>
                     <TableCell component="th" scope="row">
-                      {id + 1}
+                      {id+1}
                     </TableCell>
                     <TableCell align="left">{row.name}</TableCell>
                     <TableCell align="left">{row.stargazers_count}</TableCell>
